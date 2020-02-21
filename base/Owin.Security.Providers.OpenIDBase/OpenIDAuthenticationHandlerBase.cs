@@ -281,7 +281,7 @@ namespace Owin.Security.Providers.OpenIDBase
 
         private string BuildReturnTo(string state)
         {
-            return Request.Scheme + "://" + Request.Host +
+            return "https://" + Request.Host +
                    RequestPathBase + Options.CallbackPath +
                    "?state=" + Uri.EscapeDataString(state);
         }
